@@ -118,7 +118,7 @@ class MultiModelCreditAssessment:
         model.compile(
             optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
             loss='binary_crossentropy',
-            metrics=['accuracy', 'precision', 'recall']
+            metrics=['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
         )
         
         return model
