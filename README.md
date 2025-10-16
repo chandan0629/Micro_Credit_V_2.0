@@ -1,5 +1,17 @@
 # Micro_Credit_V_2.0
 
+[![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?logo=hacktoberfest)](https://hacktoberfest.com/)
+
+Welcome to Micro_Credit_V_2.0!  
+This project is open for Hacktoberfest 2025 contributions. We encourage new contributors to participate—check out our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## How to Participate
+
+- Look for issues labeled `hacktoberfest` or `good first issue`.
+- Submit meaningful pull requests.
+- Read our [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+Happy Hacking! 🚀
 
 # 🏦 AI-Powered Micro Credit Assessment System
 
