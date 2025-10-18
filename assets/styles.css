@@ -4,6 +4,9 @@
   --bg-gradient-2: #764ba2;
   --accent-1: #3498db;
   --accent-2: #2980b9;
+  --surface-color: rgba(255,255,255,0.95);
+  --text-color: #222;
+  --muted-color: #7f8c8d;
   --success: #27ae60;
   --danger: #e74c3c;
   --muted: #7f8c8d;
@@ -37,6 +40,10 @@ body{
 .status-indicator{padding:6px 12px;border-radius:999px;font-weight:600;font-size:0.85rem}
 .status-connected{background:var(--success);color:#fff}
 .status-disconnected{background:var(--danger);color:#fff}
+
+/* Theme toggle */
+.theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px;border-radius:8px;cursor:pointer;font-size:16px}
+.theme-toggle:focus{outline:none;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
 
 .main-content{display:grid;grid-template-columns:1fr 1.2fr;gap:26px;padding:28px}
 
@@ -85,3 +92,30 @@ body{
 
 .performance-badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:0.72rem;font-weight:700;margin-left:8px}
 .badge-excellent{background:var(--success);color:#fff}.badge-good{background:#f39c12;color:#fff}.badge-average{background:var(--danger);color:#fff}
+
+/* Dark theme overrides */
+:root[data-theme='dark']{
+  /* blue-green (teal) mix */
+  --bg-gradient-1: #071427; /* deep navy */
+  --bg-gradient-2: #042f2b; /* deep teal */
+  --accent-1: #0ea5a4; /* teal */
+  --accent-2: #06b6d4; /* sky-blue/teal */
+  --surface-color: rgba(4,12,18,0.7);
+  --text-color: #e6f6f5; /* pale aqua */
+  --muted-color: #9cc6c3; /* muted teal */
+  --surface: rgba(6,18,22,0.8);
+}
+
+body{color:var(--text-color)}
+.container{background:var(--surface)}
+.form-section,.results-section{background:transparent}
+.brand h1,.header p{color:var(--text-color)}
+.form-group label{color:var(--muted-color)}
+.form-group input{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.06);color:var(--text-color)}
+.tab{background:rgba(255,255,255,0.03);color:var(--muted-color)}
+.tab.active{background:var(--accent-1);color:#fff}
+.recommendation{background:rgba(255,255,255,0.02)}
+.comparison-card{background:rgba(255,255,255,0.03)}
+.history-item{background:rgba(255,255,255,0.03);border-left-color:var(--accent-1)}
+.error-message{background:#ff4d6d}
+.success-message{background:var(--success)}
