@@ -551,4 +551,10 @@ if __name__ == '__main__':
         except Exception as e:
             logger.error(f"Auto-training failed: {str(e)}")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Allow configuring port and debug mode via environment variables so
+    # the server can be started on a different port (for example 5001)
+    port = int(os.environ.get('PORT', '5000'))
+    debug_env = os.environ.get('FLASK_DEBUG', 'True').lower()
+    debug = debug_env in ('1', 'true', 'yes')
+
+    app.run(debug=debug, host='0.0.0.0', port=port)
