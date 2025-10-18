@@ -105,17 +105,27 @@ body{
   --muted-color: #9cc6c3; /* muted teal */
   --surface: rgba(6,18,22,0.8);
 }
+.transition-all{transition:background-color 240ms ease, color 240ms ease, border-color 240ms ease, box-shadow 240ms ease}
 
-body{color:var(--text-color)}
-.container{background:var(--surface)}
+body{color:var(--text-color); transition: color 240ms ease, background 240ms ease}
+.container{background:var(--surface); transition: background-color 240ms ease, box-shadow 240ms ease}
 .form-section,.results-section{background:transparent}
 .brand h1,.header p{color:var(--text-color)}
 .form-group label{color:var(--muted-color)}
-.form-group input{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.06);color:var(--text-color)}
-.tab{background:rgba(255,255,255,0.03);color:var(--muted-color)}
-.tab.active{background:var(--accent-1);color:#fff}
-.recommendation{background:rgba(255,255,255,0.02)}
-.comparison-card{background:rgba(255,255,255,0.03)}
-.history-item{background:rgba(255,255,255,0.03);border-left-color:var(--accent-1)}
-.error-message{background:#ff4d6d}
-.success-message{background:var(--success)}
+.form-group input{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-color:rgba(255,255,255,0.06);color:var(--text-color);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
+.form-group input:focus{box-shadow:0 8px 30px rgba(6, 180, 170, 0.06), 0 0 0 3px rgba(6,180,170,0.06)}
+.tab{background:transparent;color:var(--muted-color);border:1px solid rgba(255,255,255,0.02)}
+.tab.active{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#062024}
+.recommendation{background:linear-gradient(180deg, rgba(6,18,22,0.6), rgba(4,12,18,0.55));border-left-color:var(--accent-1)}
+.comparison-card{background:linear-gradient(180deg, rgba(6,18,22,0.6), rgba(4,12,18,0.55));box-shadow:0 8px 30px rgba(2,16,16,0.45)}
+.history-item{background:linear-gradient(180deg, rgba(6,18,22,0.6), rgba(4,12,18,0.55));border-left-color:var(--accent-1)}
+.error-message{background:#ff6b81}
+.success-message{background:linear-gradient(90deg,var(--accent-1),var(--accent-2))}
+
+/* buttons in dark mode */
+.btn{box-shadow:0 6px 20px rgba(6,180,170,0.08)}
+.btn.export{box-shadow:0 8px 30px rgba(40,200,150,0.06)}
+
+/* focus outlines for accessibility */
+*:focus{outline:none}
+button:focus, .btn:focus, .form-group input:focus{box-shadow:0 0 0 4px rgba(6,180,170,0.08);border-color:var(--accent-1)}

@@ -100,10 +100,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function applyTheme(theme){
   if(theme === 'dark'){
     document.documentElement.setAttribute('data-theme','dark');
-    const btn = el('themeToggle'); if(btn) btn.textContent = '☀️';
+    const btn = el('themeToggle'); if(btn){ btn.textContent = '☀️'; btn.setAttribute('aria-pressed','true'); btn.setAttribute('aria-label','Switch to light theme'); }
   } else {
     document.documentElement.removeAttribute('data-theme');
-    const btn = el('themeToggle'); if(btn) btn.textContent = '🌙';
+    const btn = el('themeToggle'); if(btn){ btn.textContent = '🌙'; btn.setAttribute('aria-pressed','false'); btn.setAttribute('aria-label','Switch to dark theme'); }
   }
 }
 
