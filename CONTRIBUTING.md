@@ -5,11 +5,13 @@ Thank you for your interest in contributing — we appreciate it!
 This project is participating in Hacktoberfest. Contributions that add value, are well-documented, and follow the guidelines below are welcome.
 
 How to contribute
-1. Fork the repository and create a branch from main (or the default branch):
+1. Star the Repo
+2. Follow me if you want
+3. Fork the repository and create a branch from main (or the default branch):
    - git checkout -b my-feature-branch
-2. Make changes in your branch, following the coding style used in the repository.
-3. Commit with a meaningful message and push to your fork.
-4. Open a Pull Request to the repository's main branch and fill the PR template.
+4. Make changes in your branch, following the coding style used in the repository.
+5. Commit with a meaningful message and push to your fork.
+6. Open a Pull Request to the repository's main branch and fill the PR template.
 
 Good first issues & labels
 - We will label issues as:
